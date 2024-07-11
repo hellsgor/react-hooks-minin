@@ -1,0 +1,5 @@
+.counter-wrapper {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+}
