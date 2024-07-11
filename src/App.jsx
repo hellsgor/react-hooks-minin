@@ -1,4 +1,5 @@
 import './App.css';
+import AutoFocus from './Components/AutoFocus';
 import Cords from './Components/Cords';
 import Counter from './Components/Counter';
 import ObjectState from './Components/ObjectState';
@@ -30,6 +31,7 @@ export default function App() {
         <h2 className="row__title">useRef:</h2>
         <div className="wrapper">
           <RenderCounter />
+          <AutoFocus />
         </div>
       </div>
     </>
