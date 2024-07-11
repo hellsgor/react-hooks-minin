@@ -34,8 +34,8 @@ export default function Counter() {
 
   return (
     <div className="counter card">
-      <h3 className="counter-title">i am counter: {counter}</h3>
-      <div className="counter-wrapper">
+      <h3 className="counter__title">i am counter: {counter}</h3>
+      <div className="counter__wrapper card__wrapper">
         <button className="button" onClick={increment}>
           inc
         </button>
