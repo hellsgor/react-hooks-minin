@@ -1,8 +1,8 @@
 import './App.css';
 import Cords from './Components/Cords';
-import Counter from './Components/Counter/Counter';
-import ObjectState from './Components/ObjectState/ObjectState';
-import Resource from './Components/Resource/Resource';
+import Counter from './Components/Counter';
+import ObjectState from './Components/ObjectState';
+import Resource from './Components/Resource';
 
 export default function App() {
   return (
