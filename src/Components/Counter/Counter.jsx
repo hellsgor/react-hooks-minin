@@ -37,9 +37,15 @@ export default function Counter() {
     <div className="counter card">
       <h3 className="counter-title">i am counter: {counter}</h3>
       <div className="counter-wrapper">
-        <button onClick={increment}>inc</button>
-        <button onClick={doubleIncrement}>double inc</button>
-        <button onClick={decrement}>dec</button>
+        <button className="button" onClick={increment}>
+          inc
+        </button>
+        <button className="button" onClick={doubleIncrement}>
+          double inc
+        </button>
+        <button className="button" onClick={decrement}>
+          dec
+        </button>
       </div>
     </div>
   );
