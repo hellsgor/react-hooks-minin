@@ -29,12 +29,12 @@ export default function Counter() {
   }
 
   function doubleIncrement() {
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
+    increment();
+    increment();
   }
 
   return (
-    <div className="counter">
+    <div className="counter card">
       <h3 className="counter-title">i am counter: {counter}</h3>
       <div className="counter-wrapper">
         <button onClick={increment}>inc</button>
