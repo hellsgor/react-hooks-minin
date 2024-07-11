@@ -13,6 +13,14 @@ export default function Resource() {
   // useEffect служит для каких-либо сайд-эффектов
   // то есть наблюдая за чем-то можно реагировать на изменения и выполнять какую-то логику
 
+  useEffect(() => {
+    console.log('ComponentDidMount');
+    // с помощью useEffect можно эмулировать какие-либо life-siecle-hooks
+    // например, можно сэмулировать момент когда компонент полностью зарэндерился и готов к работе.
+    // Важно не передавать ничего в deps
+    // Этот колл-бэк вызовется только один раз при рендере компонента
+  }, []);
+
   return (
     <div className="resource card">
       <h3 className="resource__type">type: {type}</h3>
