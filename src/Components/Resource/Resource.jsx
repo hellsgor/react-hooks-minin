@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 export default function Resource() {
   const [type, setType] = useState('users');
   const [data, setData] = useState([]);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/${type}`)
@@ -19,7 +20,23 @@ export default function Resource() {
     // например, можно сэмулировать момент когда компонент полностью зарэндерился и готов к работе.
     // Важно не передавать ничего в deps
     // Этот колл-бэк вызовется только один раз при рендере компонента
+
+    window.addEventListener('mousemove', mouseMoveHandler);
+    // то есть, при первом рендере компонента
+    // добавляется слушатель события.
+
+    // Важно только то, что любые добавленные слушатели событий нужно удалять
+    return () => {
+      window.removeEventListener('mousemove', mouseMoveHandler);
+    };
   }, []);
+
+  function mouseMoveHandler(event) {
+    setPosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  }
 
   return (
     <div className="resource card">
@@ -38,6 +55,7 @@ export default function Resource() {
       </div>
 
       {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+      <pre>{JSON.stringify(position, null, 2)}</pre>
     </div>
   );
 }
