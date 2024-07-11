@@ -1,4 +1,5 @@
 import './App.css';
+import Cords from './Components/Cords';
 import Counter from './Components/Counter/Counter';
 import ObjectState from './Components/ObjectState/ObjectState';
 import Resource from './Components/Resource/Resource';
@@ -20,6 +21,7 @@ export default function App() {
         <h2 className="row__title">useEffect:</h2>
         <div className="wrapper">
           <Resource />
+          <Cords />
         </div>
       </div>
     </>
