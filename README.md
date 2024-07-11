@@ -4,6 +4,10 @@ Study React Hooks
 
 As a training material - video [React Hooks - Full Course (about all hooks in 1 video!)](https://www.youtube.com/watch?v=9kjxafhotqi&t=1357) from [Vladilen Minin](https://www.youtube.com/@vladilenminin)
 
+## Demo
+
+You can see the assembled project at the link [https://hellsgor.github.io/react-hooks-minin/](https://hellsgor.github.io/react-hooks-minin/)
+
 ## Running the Project
 
 1. Ensure you have Node.js installed (version used during development was 20.11.0).
