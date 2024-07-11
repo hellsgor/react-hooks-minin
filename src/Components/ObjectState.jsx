@@ -15,7 +15,7 @@ export default function ObjectState() {
 
   return (
     <div className="object-state card">
-      <h3 className="object-state__title">i am object-state</h3>
+      <h3 className="object-state__title">i am ObjectState</h3>
       <pre>{JSON.stringify(state, null, 2)}</pre>
       <button className="button" onClick={updateName}>
         setName

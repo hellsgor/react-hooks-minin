@@ -29,7 +29,7 @@ export default function Cords() {
 
   return (
     <div className="cords card">
-      <h3 className="card__title">i am cords</h3>
+      <h3 className="card__title">i am Cords</h3>
 
       <pre>{JSON.stringify(position, null, 2)}</pre>
     </div>

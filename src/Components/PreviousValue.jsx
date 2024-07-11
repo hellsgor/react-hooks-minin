@@ -11,7 +11,7 @@ export default function PreviousValue() {
 
   return (
     <div className="previous-value card">
-      <h3 className="previous-value__title">i am AutoFocus</h3>
+      <h3 className="previous-value__title">i am PreviousValue</h3>
 
       <input
         type="text"
