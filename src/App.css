@@ -39,6 +39,9 @@
   border: 1px solid #646cff;
   border-radius: 8px;
   min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 
 .read-the-docs {
@@ -53,8 +56,10 @@
 .row__title {
   width: 12rem;
   text-align: left;
+  align-self: center;
 }
 
 pre {
   text-align: left;
+  margin: 0;
 }
