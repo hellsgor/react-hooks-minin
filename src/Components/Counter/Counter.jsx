@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Counter.css';
 
 function computedInitialCounter() {
   console.log('Some calculations...');
