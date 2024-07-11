@@ -16,7 +16,7 @@ export default function RenderCounter() {
     renderCount.current++;
   });
   return (
-    <div className="resource card">
+    <div className="render-counter card">
       <h3 className="card__title">i am render counter</h3>
 
       <h4>render number: {renderCount.current}</h4>

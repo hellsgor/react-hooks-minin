@@ -13,9 +13,9 @@ export default function AutoFocus() {
   }
 
   return (
-    <div className="counter card">
-      <h3 className="counter__title">i am AutoFocus</h3>
-      <div className="counter__wrapper card__wrapper">
+    <div className="auto-focus card">
+      <h3 className="auto-focus__title">i am AutoFocus</h3>
+      <div className="auto-focus__wrapper card__wrapper">
         <input type="text" ref={inputRef} />
         <button className="button" onClick={focus}>
           focus
