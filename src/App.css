@@ -94,3 +94,15 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #464646;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: #858585;
+}
