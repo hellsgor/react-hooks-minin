@@ -15,12 +15,12 @@ export default function AutoFocus() {
   return (
     <div className="auto-focus card">
       <h3 className="auto-focus__title">i am AutoFocus</h3>
-      <div className="auto-focus__wrapper card__wrapper">
-        <input type="text" ref={inputRef} />
-        <button className="button" onClick={focus}>
-          focus
-        </button>
-      </div>
+
+      <input type="text" ref={inputRef} />
+
+      <button className="button" onClick={focus}>
+        focus
+      </button>
     </div>
   );
 }
