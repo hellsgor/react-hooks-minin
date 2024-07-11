@@ -34,7 +34,8 @@ export default function Counter() {
 
   return (
     <div className="counter card">
-      <h3 className="counter__title">i am counter: {counter}</h3>
+      <h3 className="counter__title">i am Counter</h3>
+      <h4 style={{ fontSize: '4rem' }}>{counter}</h4>
       <div className="counter__wrapper card__wrapper">
         <button className="button" onClick={increment}>
           inc

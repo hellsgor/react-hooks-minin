@@ -15,7 +15,7 @@ export default function Resource() {
 
   return (
     <div className="resource card">
-      <h3 className="card__title">i am resource</h3>
+      <h3 className="card__title">i am Resource</h3>
 
       <div className="resource__wrapper card__wrapper">
         <button className={type === 'users' ? 'button button_active' : 'button'} onClick={() => setType('users')}>

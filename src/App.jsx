@@ -1,7 +1,10 @@
 import './App.css';
+import AutoFocus from './Components/AutoFocus';
 import Cords from './Components/Cords';
 import Counter from './Components/Counter';
 import ObjectState from './Components/ObjectState';
+import PreviousValue from './Components/PreviousValue';
+import RenderCounter from './Components/RenderCounter';
 import Resource from './Components/Resource';
 
 export default function App() {
@@ -22,6 +25,15 @@ export default function App() {
         <div className="wrapper">
           <Resource />
           <Cords />
+        </div>
+      </div>
+
+      <div className="row">
+        <h2 className="row__title">useRef:</h2>
+        <div className="wrapper">
+          <RenderCounter />
+          <AutoFocus />
+          <PreviousValue />
         </div>
       </div>
     </>

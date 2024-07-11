@@ -9,6 +9,10 @@
   row-gap: 2rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -52,7 +56,6 @@
   flex-direction: column;
   flex: 1 1 calc(50% - 1rem);
   row-gap: 1rem;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -90,7 +93,18 @@ pre {
   background-color: #1f1f1f;
   padding: 1rem;
   border-radius: 8px;
-  box-sizing: border-box;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #464646;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: #858585;
 }
