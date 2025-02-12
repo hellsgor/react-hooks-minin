@@ -28,7 +28,7 @@ export default function MemoizedCounter() {
 
   return (
     <div className="card">
-      <h3 className="card__title">i am NewComp</h3>
+      <h3 className="card__title">i am MemoizedCounter</h3>
       <h4>Computed property: {computed}</h4>
 
       <div className="card__wrapper">
