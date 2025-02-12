@@ -7,6 +7,7 @@ import ObjectState from './Components/ObjectState';
 import PreviousValue from './Components/PreviousValue';
 import RenderCounter from './Components/RenderCounter';
 import Resource from './Components/Resource';
+import MemoizedList from './Components/MemoizedList';
 
 export default function App() {
   return (
@@ -42,6 +43,13 @@ export default function App() {
         <h2 className="row__title">useMemo:</h2>
         <div className="wrapper">
           <MemoizedCounter />
+        </div>
+      </div>
+
+      <div className="row">
+        <h2 className="row__title">useCallback:</h2>
+        <div className="wrapper">
+          <MemoizedList />
         </div>
       </div>
     </>
