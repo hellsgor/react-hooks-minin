@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ItemsList } from './ItemsList';
 
 export default function MemoizedList() {
@@ -15,8 +15,10 @@ export default function MemoizedList() {
     transition: 'background-color 0.3s ease-in-out',
   };
 
-  const generateItemsFromAPI = () =>
-    new Array(count).fill('').map((_, i) => `Element ${i + 1}`);
+  const generateItemsFromAPI = useCallback(
+    () => new Array(count).fill('').map((_, i) => `Element ${i + 1}`),
+    [count],
+  );
 
   return (
     <div className="card">
