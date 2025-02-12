@@ -13,6 +13,19 @@ export default function MemoizedCounter() {
 
   const computed = useMemo(() => complexCompute(number), [number]);
 
+  const styles = useMemo(() => {
+    console.log('Create styles');
+    return {
+      width: '2rem',
+      height: '2rem',
+      borderRadius: '50%',
+      alignSelf: 'center',
+      backgroundColor: colored ? 'yellowgreen' : 'transparent',
+      border: '1px solid yellowgreen',
+      transition: 'background-color 0.3s ease-in-out',
+    };
+  }, [colored]);
+
   return (
     <div className="card">
       <h3 className="card__title">i am NewComp</h3>
@@ -37,17 +50,7 @@ export default function MemoizedCounter() {
           change color
         </button>
 
-        <div
-          style={{
-            width: '2rem',
-            height: '2rem',
-            borderRadius: '50%',
-            alignSelf: 'center',
-            backgroundColor: `${colored ? 'yellowgreen' : 'transparent'}`,
-            border: `1px solid ${colored ? 'yellowgreen' : '#464646'}`,
-            transition: 'background-color 0.3s ease-in-out',
-          }}
-        ></div>
+        <div style={styles}></div>
       </div>
     </div>
   );
