@@ -8,6 +8,9 @@ import PreviousValue from './Components/PreviousValue';
 import RenderCounter from './Components/RenderCounter';
 import Resource from './Components/Resource';
 import MemoizedList from './Components/MemoizedList';
+import AlertWrapper from './Components/AlertWrapper';
+import Alert from './Components/Alert/Alert';
+import { AlertProvider } from './Components/Alert/AlertProvider';
 
 export default function App() {
   return (
@@ -50,6 +53,16 @@ export default function App() {
         <h2 className="row__title">useCallback:</h2>
         <div className="wrapper">
           <MemoizedList />
+        </div>
+      </div>
+
+      <div className="row">
+        <h2 className="row__title">useContext:</h2>
+        <div className="wrapper">
+          <AlertProvider>
+            <Alert />
+            <AlertWrapper />
+          </AlertProvider>
         </div>
       </div>
     </>
