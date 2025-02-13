@@ -1,4 +1,8 @@
-export default function AlertWrapper({ toggle }) {
+import { useAlert } from './Alert/AlertContext';
+
+export default function AlertWrapper() {
+  const { toggle } = useAlert();
+
   return (
     <div className="card">
       <h3 className="card__title">i am AlertWrapper</h3>

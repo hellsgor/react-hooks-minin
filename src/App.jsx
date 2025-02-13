@@ -9,16 +9,10 @@ import RenderCounter from './Components/RenderCounter';
 import Resource from './Components/Resource';
 import MemoizedList from './Components/MemoizedList';
 import AlertWrapper from './Components/AlertWrapper';
-import Alert from './Components/Alert';
-import React, { useState } from 'react';
-
-export const AlertContext = React.createContext();
+import Alert from './Components/Alert/Alert';
+import { AlertProvider } from './Components/Alert/AlertProvider';
 
 export default function App() {
-  const [alert, setAlert] = useState(false);
-
-  const toggleAlert = () => setAlert((prev) => !prev);
-
   return (
     <>
       <h1>Hello, React Hooks!</h1>
@@ -65,10 +59,10 @@ export default function App() {
       <div className="row">
         <h2 className="row__title">useContext:</h2>
         <div className="wrapper">
-          <AlertContext.Provider value={alert}>
+          <AlertProvider>
             <Alert />
-            <AlertWrapper toggle={toggleAlert} />
-          </AlertContext.Provider>
+            <AlertWrapper />
+          </AlertProvider>
         </div>
       </div>
     </>
