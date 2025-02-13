@@ -22,7 +22,7 @@ export default function MemoizedList() {
 
   return (
     <div className="card">
-      <h3 className="card__title">i am NewComp</h3>
+      <h3 className="card__title">i am MemoizedList</h3>
       <h4>Number of elements: {count}</h4>
 
       <div className="card__wrapper">
