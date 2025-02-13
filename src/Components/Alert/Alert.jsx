@@ -1,7 +1,7 @@
 import { useAlert } from './AlertContext';
 
 export default function Alert() {
-  const { visible, toggle } = useAlert();
+  const { visible, toggle, message } = useAlert();
 
   if (!visible) return null;
 
@@ -17,7 +17,7 @@ export default function Alert() {
         cursor: 'pointer',
       }}
     >
-      <p>This is a very, very important message</p>
+      <p>{message || 'This is a very, very important message'}</p>
     </div>
   );
 }

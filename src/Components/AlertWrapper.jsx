@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { useAlert } from './Alert/AlertContext';
 
 export default function AlertWrapper() {
-  const { toggle } = useAlert();
+  const { toggle, setAlertMessage } = useAlert();
+
+  useEffect(
+    () => setAlertMessage('Hello from AlertWrapper'),
+    [setAlertMessage],
+  );
 
   return (
     <div className="card">
