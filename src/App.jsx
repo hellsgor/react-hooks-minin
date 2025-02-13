@@ -8,8 +8,17 @@ import PreviousValue from './Components/PreviousValue';
 import RenderCounter from './Components/RenderCounter';
 import Resource from './Components/Resource';
 import MemoizedList from './Components/MemoizedList';
+import AlertWrapper from './Components/AlertWrapper';
+import Alert from './Components/Alert';
+import React, { useState } from 'react';
+
+export const AlertContext = React.createContext();
 
 export default function App() {
+  const [alert, setAlert] = useState(false);
+
+  const toggleAlert = () => setAlert((prev) => !prev);
+
   return (
     <>
       <h1>Hello, React Hooks!</h1>
@@ -50,6 +59,16 @@ export default function App() {
         <h2 className="row__title">useCallback:</h2>
         <div className="wrapper">
           <MemoizedList />
+        </div>
+      </div>
+
+      <div className="row">
+        <h2 className="row__title">useContext:</h2>
+        <div className="wrapper">
+          <AlertContext.Provider value={alert}>
+            <Alert />
+            <AlertWrapper toggle={toggleAlert} />
+          </AlertContext.Provider>
         </div>
       </div>
     </>
