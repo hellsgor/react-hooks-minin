@@ -1,18 +1,17 @@
-import { useEffect } from 'react';
 import { useAlert } from './Alert/AlertContext';
 
 export default function AlertWithReducer() {
-  const { toggle, setAlertMessage } = useAlert();
+  const { visible, show, hide } = useAlert();
 
-  useEffect(
-    () => setAlertMessage('Hello from AlertWithReducer'),
-    [setAlertMessage],
-  );
+  const alertText = 'Hello from AlertWithReducer!';
 
   return (
     <div className="card">
       <h3 className="card__title">i am AlertWithReducer</h3>
-      <button className="button" onClick={toggle}>
+      <button
+        className="button"
+        onClick={visible ? hide : () => show(alertText)}
+      >
         Alert
       </button>
     </div>

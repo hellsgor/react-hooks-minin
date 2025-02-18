@@ -12,6 +12,8 @@ import AlertWrapper from './Components/AlertWrapper';
 import Alert from './Components/Alert/Alert';
 import { AlertProvider } from './Components/Alert/AlertProvider';
 import AlertWithReducer from './Components/AlertWithReducer';
+import { AlertReducerProvider } from './Components/AlertReducer/AlertReducerProvider';
+import AlertReducer from './Components/AlertReducer/AlertReducer';
 
 export default function App() {
   return (
@@ -70,10 +72,10 @@ export default function App() {
       <div className="row">
         <h2 className="row__title">useReducer:</h2>
         <div className="wrapper">
-          <AlertProvider>
-            <Alert />
+          <AlertReducerProvider>
+            <AlertReducer />
             <AlertWithReducer />
-          </AlertProvider>
+          </AlertReducerProvider>
         </div>
       </div>
     </>
