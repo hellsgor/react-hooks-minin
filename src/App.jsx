@@ -11,6 +11,7 @@ import MemoizedList from './Components/MemoizedList';
 import AlertWrapper from './Components/AlertWrapper';
 import Alert from './Components/Alert/Alert';
 import { AlertProvider } from './Components/Alert/AlertProvider';
+import AlertWithReducer from './Components/AlertWithReducer';
 
 export default function App() {
   return (
@@ -62,6 +63,16 @@ export default function App() {
           <AlertProvider>
             <Alert />
             <AlertWrapper />
+          </AlertProvider>
+        </div>
+      </div>
+
+      <div className="row">
+        <h2 className="row__title">useReducer:</h2>
+        <div className="wrapper">
+          <AlertProvider>
+            <Alert />
+            <AlertWithReducer />
           </AlertProvider>
         </div>
       </div>
